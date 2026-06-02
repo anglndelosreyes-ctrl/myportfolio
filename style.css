@@ -189,7 +189,7 @@ nav.scrolled { padding: .8rem 4rem; background: rgba(0,0,0,.92); }
 }
 
 .hero-description {
-  font-size: 0.88rem; color: var(--text-gray); max-width: 340px;
+  font-size: 0.75rem; color: var(--text-gray); max-width: 280px;
   line-height: 1.75; margin-bottom: 2.5rem;
   animation: fadeSlideUp .9s ease .2s both;
 }
@@ -213,7 +213,7 @@ nav.scrolled { padding: .8rem 4rem; background: rgba(0,0,0,.92); }
 @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:.2;} }
 
 .hero-skill-icons {
-  display: flex; gap: 1.5rem; align-items: center;
+  display: flex; gap: 1.1rem; align-items: center;
   animation: fadeSlideUp .9s ease .4s both;
 }
 .skill-icon-wrap {
@@ -221,11 +221,11 @@ nav.scrolled { padding: .8rem 4rem; background: rgba(0,0,0,.92); }
   position: relative;
 }
 .skill-icon-wrap i {
-  font-size: 1.8rem; color: rgba(255,255,255,.25);
+  font-size: 1.3rem; color: rgba(255,255,255,.25);
   transition: all .4s cubic-bezier(.175,.885,.32,1.275);
 }
 .skill-icon-wrap span {
-  font-size: .58rem; letter-spacing: 1px; text-transform: uppercase;
+  font-size: .5rem; letter-spacing: 1px; text-transform: uppercase;
   color: transparent; transition: color .3s ease;
 }
 .skill-icon-wrap:hover i {
