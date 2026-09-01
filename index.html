@@ -179,6 +179,44 @@
         .project-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem; margin-top: auto; }
         .project-tag { background: rgba(255,45,117,.06); color: var(--primary-pink); border: 1px solid rgba(255,45,117,.2); padding: .45rem 1rem; font-size: .68rem; border-radius: 100px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; transition: all .3s ease; }
         .project-card:hover .project-tag { background: rgba(255,45,117,.12); border-color: var(--primary-pink); box-shadow: 0 0 8px rgba(255,45,117,.2); }
+
+        /* ─── DESIGN PORTFOLIO — CARD SHUFFLE ─── */
+        .shuffle-wrap { display: flex; flex-direction: column; align-items: center; gap: 3rem; }
+        .shuffle-stage { position: relative; width: 340px; height: 460px; perspective: 1400px; }
+        .shuffle-card {
+            position: absolute; inset: 0; border-radius: 20px; overflow: hidden; cursor: pointer;
+            background: var(--surface-black); border: 1px solid rgba(255,255,255,.08);
+            box-shadow: 0 30px 60px rgba(0,0,0,.6);
+            transition: transform .6s cubic-bezier(.22,1,.36,1), box-shadow .6s ease, opacity .6s ease;
+            will-change: transform;
+        }
+        .shuffle-card img { width: 100%; height: 68%; object-fit: cover; display: block; filter: brightness(.92) saturate(1.05); transition: filter .4s ease; }
+        .shuffle-card:hover img { filter: brightness(1.05) saturate(1.15); }
+        .shuffle-card-body { padding: 1.2rem 1.4rem; height: 32%; display: flex; flex-direction: column; justify-content: center; }
+        .shuffle-card-body h4 { font-size: 1.05rem; color: var(--text-white); margin-bottom: .35rem; font-family: 'Amethysta', serif; }
+        .shuffle-card-body span { font-size: .65rem; letter-spacing: 2px; text-transform: uppercase; color: var(--primary-pink); }
+        .shuffle-card:hover { box-shadow: 0 40px 80px rgba(0,0,0,.7), 0 0 40px rgba(255,45,117,.15); }
+        .shuffle-card.pos-0 { transform: translate(0,0) rotate(0deg) scale(1); z-index: 5; opacity: 1; }
+        .shuffle-card.pos-1 { transform: translate(18px,14px) rotate(4deg) scale(.96); z-index: 4; opacity: .95; }
+        .shuffle-card.pos-2 { transform: translate(-16px,26px) rotate(-3deg) scale(.92); z-index: 3; opacity: .85; }
+        .shuffle-card.pos-3 { transform: translate(10px,38px) rotate(2deg) scale(.88); z-index: 2; opacity: .55; }
+        .shuffle-card.pos-back { transform: translate(0,50px) rotate(0deg) scale(.84); z-index: 1; opacity: 0; }
+        .shuffle-card.leaving { transform: translate(60px,-70px) rotate(18deg) scale(.9); opacity: 0; z-index: 6; }
+        .shuffle-controls { display: flex; align-items: center; gap: 2rem; }
+        .shuffle-btn {
+            width: 56px; height: 56px; border-radius: 50%; background: rgba(255,255,255,.04);
+            border: 1px solid rgba(255,255,255,.1); color: var(--text-white); font-size: 1.1rem;
+            display: flex; align-items: center; justify-content: center; cursor: pointer;
+            transition: all .3s ease; backdrop-filter: blur(10px);
+        }
+        .shuffle-btn:hover { background: var(--primary-pink); color: #000; box-shadow: 0 0 20px var(--primary-pink); transform: scale(1.08); }
+        .shuffle-hint { font-size: .68rem; letter-spacing: 2px; text-transform: uppercase; color: var(--text-gray); text-align: center; }
+        .shuffle-dots { display: flex; gap: .5rem; }
+        .shuffle-dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,.15); transition: all .3s ease; }
+        .shuffle-dot.active { background: var(--primary-pink); box-shadow: 0 0 8px var(--primary-pink); width: 20px; border-radius: 4px; }
+        @media (max-width: 480px) {
+            .shuffle-stage { width: 270px; height: 380px; }
+        }
  
         /* ─── SKILLS ─── */
         .skills-container { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; max-width: 900px; margin: 0 auto; }
@@ -354,6 +392,7 @@
                     <li><a href="#education">Education</a></li>
                     <li><a href="#certificates">Certificates</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#designs">Designs</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -548,6 +587,52 @@
         <span class="project-tag">MySQL</span>
     </div>
 </div>
+            </div>
+        </section>
+
+        <section id="designs" class="section">
+            <h2 class="section-title reveal"><span class="title-accent">Design Portfolio</span></h2>
+            <div class="shuffle-wrap reveal">
+                <div class="shuffle-stage" id="shuffleStage">
+                    <div class="shuffle-card" data-img="images/designs/social-mentorship.jpg">
+                        <img src="images/designs/social-mentorship.jpg" alt="Bin Digital Mentorship Strategy graphic">
+                        <div class="shuffle-card-body">
+                            <span>Social Media Design</span>
+                            <h4>Bin Digital — Mentorship Strategy Post</h4>
+                        </div>
+                    </div>
+                    <div class="shuffle-card" data-img="images/designs/travel-poster.jpg">
+                        <img src="images/designs/travel-poster.jpg" alt="Bin Travel and Tours poster">
+                        <div class="shuffle-card-body">
+                            <span>Social Media Design</span>
+                            <h4>Bin Travel &amp; Tours — "Explore Anywhere"</h4>
+                        </div>
+                    </div>
+                    <div class="shuffle-card" data-img="images/designs/school-homepage.png">
+                        <img src="images/designs/school-homepage.png" alt="Stockbridge American International School homepage design">
+                        <div class="shuffle-card-body">
+                            <span>Web / UI Design</span>
+                            <h4>Stockbridge International School — Homepage</h4>
+                        </div>
+                    </div>
+                    <div class="shuffle-card" data-img="images/designs/sitemap-wireframe.png">
+                        <img src="images/designs/sitemap-wireframe.png" alt="Payment Monitoring System sitemap wireframe">
+                        <div class="shuffle-card-body">
+                            <span>UX / Sitemap</span>
+                            <h4>Payment Monitoring System — Sitemap</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="shuffle-controls">
+                    <button class="shuffle-btn" id="shufflePrev" aria-label="Previous design"><i class="fas fa-chevron-left"></i></button>
+                    <div class="shuffle-dots" id="shuffleDots"></div>
+                    <button class="shuffle-btn" id="shuffleNext" aria-label="Next design"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <p class="shuffle-hint">Click the top card, or use the arrows, to shuffle through the deck</p>
+            </div>
+            <div id="designModal" class="modal">
+                <button class="modal-close" id="designModalClose">Close</button>
+                <img class="modal-content" id="designModalImg" alt="Design Full View">
             </div>
         </section>
  
@@ -805,6 +890,88 @@
         mClose.addEventListener('click',closeModal);
         modal.addEventListener('click',e=>{ if(e.target===modal) closeModal(); });
         document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeModal(); });
+
+        // ── DESIGN PORTFOLIO CARD SHUFFLE ──
+        (function(){
+            const stage  = document.getElementById('shuffleStage');
+            const cards  = Array.from(stage.querySelectorAll('.shuffle-card'));
+            const dotsEl = document.getElementById('shuffleDots');
+            const prevBtn= document.getElementById('shufflePrev');
+            const nextBtn= document.getElementById('shuffleNext');
+            const dModal = document.getElementById('designModal');
+            const dImg   = document.getElementById('designModalImg');
+            const dClose = document.getElementById('designModalClose');
+            let order = cards.map((_,i)=>i); // order[0] is the card index currently on top
+            let animating = false;
+
+            cards.forEach((_,i)=>{
+                const dot=document.createElement('div');
+                dot.className='shuffle-dot'+(i===0?' active':'');
+                dotsEl.appendChild(dot);
+            });
+            const dots = Array.from(dotsEl.children);
+
+            function render(){
+                order.forEach((cardIdx,pos)=>{
+                    const el = cards[cardIdx];
+                    el.classList.remove('pos-0','pos-1','pos-2','pos-3','pos-back','leaving');
+                    if(pos<=3){ el.classList.add('pos-'+pos); }
+                    else { el.classList.add('pos-back'); }
+                });
+                dots.forEach((d,i)=>d.classList.toggle('active', i===order[0]));
+            }
+
+            function shuffleNext(){
+                if(animating) return;
+                animating = true;
+                const topIdx = order[0];
+                const topEl  = cards[topIdx];
+                topEl.classList.add('leaving');
+                setTimeout(()=>{
+                    order.push(order.shift());
+                    render();
+                    animating = false;
+                }, 320);
+            }
+
+            function shufflePrev(){
+                if(animating) return;
+                order.unshift(order.pop());
+                render();
+            }
+
+            render();
+            nextBtn.addEventListener('click', shuffleNext);
+            prevBtn.addEventListener('click', shufflePrev);
+
+            cards.forEach(card=>{
+                card.addEventListener('click', ()=>{
+                    if(card.classList.contains('pos-0')){
+                        shuffleNext();
+                    } else {
+                        // bring the clicked card to front
+                        const idx = cards.indexOf(card);
+                        const posInOrder = order.indexOf(idx);
+                        order.splice(posInOrder,1);
+                        order.unshift(idx);
+                        render();
+                    }
+                });
+            });
+
+            document.querySelectorAll('.shuffle-card').forEach(card=>{
+                card.addEventListener('dblclick', e=>{
+                    e.preventDefault();
+                    dImg.src = card.dataset.img;
+                    dModal.classList.add('open');
+                    document.body.style.overflow='hidden';
+                });
+            });
+            const closeDesignModal=()=>{ dModal.classList.remove('open'); document.body.style.overflow=''; };
+            dClose.addEventListener('click', closeDesignModal);
+            dModal.addEventListener('click', e=>{ if(e.target===dModal) closeDesignModal(); });
+            document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeDesignModal(); });
+        })();
  
         // ── SCROLL REVEAL ──
         const revealEls=document.querySelectorAll('.reveal');
