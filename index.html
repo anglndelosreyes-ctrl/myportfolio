@@ -23,16 +23,16 @@
         body { font-family: 'Raleway', sans-serif; background: var(--bg-black); color: var(--text-white); overflow-x: hidden; cursor: none; line-height: 1.7; font-size: 1rem; }
         h1, h2, h3, h4, .nav-brand { font-family: 'Amethysta', serif; }
         p, li, span, a, .hero-description, .skill-item span, .about-text p, .experience-item ul li, .achievement-list li { font-family: 'Raleway', sans-serif; }
- 
+
         /* ─── ORBS CANVAS ─── */
         #orbsCanvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; }
- 
+
         /* ─── CURSOR ─── */
         #cursor { position: fixed; width: 10px; height: 10px; background: var(--primary-pink); border-radius: 50%; pointer-events: none; z-index: 99999; transform: translate(-50%,-50%); box-shadow: 0 0 12px var(--primary-pink); }
         #cursor-ring { position: fixed; width: 38px; height: 38px; border: 1.5px solid rgba(255,45,117,.5); border-radius: 50%; pointer-events: none; z-index: 99998; transform: translate(-50%,-50%); }
         body:has(a:hover) #cursor, body:has(button:hover) #cursor { width: 16px; height: 16px; box-shadow: 0 0 20px var(--primary-pink); }
         body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring { width: 56px; height: 56px; border-color: var(--primary-pink); }
- 
+
         /* ─── POPUP BUBBLES ─── */
         #popup-container { position: fixed; inset: 0; pointer-events: none; z-index: 9000; overflow: hidden; }
         .popup-bubble {
@@ -61,7 +61,7 @@
             70%  { opacity: 1; }
             100% { opacity: 0; transform: translateY(-160px) scale(0.85); }
         }
- 
+
         /* ─── NAV ─── */
         nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1.2rem 4rem; background: rgba(0,0,0,.75); backdrop-filter: blur(24px); border-bottom: 1px solid rgba(255,255,255,.03); transition: all .4s ease; }
         nav.scrolled { padding: .8rem 4rem; background: rgba(0,0,0,.95); box-shadow: 0 8px 32px rgba(255,45,117,.1); }
@@ -73,8 +73,8 @@
         .nav-links a:hover, .nav-links a.active { color: var(--text-white); }
         .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
         .mobile-toggle { display: none; background: transparent; border: none; color: var(--text-white); font-size: 1.4rem; cursor: pointer; z-index: 1001; }
- 
-        /* ─── HERO ─── */   
+
+        /* ─── HERO ─── */
         #hero { min-height: 100vh; position: relative; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: 0; }
         .hero-left { padding: 12rem 8rem 4rem; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 2; }
         .hero-right { position: relative; height: 100vh; overflow: hidden; }
@@ -111,19 +111,19 @@
         .scroll-indicator span { font-size: .65rem; letter-spacing: 2px; text-transform: uppercase; color: var(--text-gray); }
         .scroll-indicator svg { width: 24px; height: 24px; stroke: var(--primary-pink); fill: none; stroke-width: 2; }
         @keyframes bounce { 0%,100%{ transform: translateX(-50%) translateY(0); } 50%{ transform: translateX(-50%) translateY(8px); } }
- 
+
         /* ─── PROFILE IMAGE ─── */
         .profile-img-container { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 400px; height: 500px; z-index: 10; }
         .profile-img-container img { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; box-shadow: 0 20px 60px rgba(0,0,0,.8),0 0 40px rgba(255,45,117,.3); position: relative; z-index: 2; }
         .profile-img-container::before { content: ''; position: absolute; inset: -30px; background: radial-gradient(circle,rgba(255,45,117,.2) 0%,transparent 70%); border-radius: 8px; z-index: 1; animation: glow 3s ease-in-out infinite; pointer-events: none; }
         @keyframes glow { 0%,100%{ opacity:.4; } 50%{ opacity:1; } }
- 
+
         /* ─── SECTIONS ─── */
         .section { padding: 8rem 6rem; background: var(--bg-black); position: relative; overflow: hidden; }
         .section::before { content: ''; position: absolute; top: 0; right: 0; width: 300px; height: 300px; background: radial-gradient(circle,rgba(255,45,117,.04) 0%,transparent 70%); pointer-events: none; }
         .section-title { font-size: 3.5rem; font-weight: 400; letter-spacing: 1px; color: var(--text-white); text-align: center; margin-bottom: 4rem; position: relative; display: inline-block; width: 100%; font-family: 'Libre Baskerville', serif; font-style: italic; }
         .section-title .title-accent { position: relative; display: inline-block; background: linear-gradient(90deg,var(--primary-pink),var(--secondary-pink)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
- 
+
         /* ─── ABOUT ─── */
         .about-content { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
         .about-text h3 { font-size: 2.8rem; color: var(--text-white); margin-bottom: 1.5rem; background: linear-gradient(90deg,var(--primary-pink),var(--secondary-pink)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: 'Libre Baskerville', serif; font-style: italic; font-weight: 400; }
@@ -136,7 +136,7 @@
         .highlight-icon { font-size: 2.5rem; color: var(--primary-pink); margin-bottom: 1rem; filter: drop-shadow(0 0 8px rgba(255,45,117,.4)); }
         .highlight-card h4 { font-size: 1.2rem; color: var(--text-white); margin-bottom: .5rem; }
         .highlight-card p { font-size: .9rem; color: var(--text-gray); margin-bottom: 0; }
- 
+
         /* ─── EDUCATION ─── */
         .education-cards { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 2.5rem; }
         .edu-card { background: rgba(18,18,18,.6); border: 1px solid rgba(255,255,255,.05); padding: 2.5rem; border-radius: 20px; backdrop-filter: blur(10px); position: relative; overflow: hidden; transition: all .5s cubic-bezier(.4,0,.2,1); cursor: pointer; }
@@ -147,7 +147,7 @@
         .edu-info h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: .4rem; color: var(--text-white); }
         .edu-date { font-size: .7rem; letter-spacing: 2px; text-transform: uppercase; color: var(--primary-pink); font-weight: 700; display: block; margin-bottom: .8rem; }
         .edu-info p { font-size: .9rem; color: var(--text-gray); }
- 
+
         /* ─── CERTIFICATES ─── */
         .certificate-slider-container { position: relative; padding: 0 4rem; z-index: 1; }
         .certificate-carousel { overflow-x: auto; scroll-behavior: smooth; scrollbar-width: none; -ms-overflow-style: none; padding: 1.5rem 0 2rem; }
@@ -163,7 +163,7 @@
         .slider-arrow:hover { background: var(--primary-pink); color: #000; transform: translateY(-50%) scale(1.1); box-shadow: 0 0 20px var(--primary-pink); }
         .prev-arrow { left: -6px; }
         .next-arrow { right: -6px; }
- 
+
         /* ─── PROJECTS ─── */
         .projects-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 2.5rem; }
         .project-card { background: rgba(18,18,18,.6); border: 1px solid rgba(255,255,255,.05); padding: 2.5rem 2rem; border-radius: 24px; text-align: center; display: flex; flex-direction: column; align-items: center; position: relative; overflow: hidden; transition: all .5s cubic-bezier(.4,0,.2,1); cursor: pointer; backdrop-filter: blur(10px); }
@@ -217,7 +217,7 @@
         @media (max-width: 480px) {
             .shuffle-stage { width: 270px; height: 380px; }
         }
- 
+
         /* ─── SKILLS ─── */
         .skills-container { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; max-width: 900px; margin: 0 auto; }
         .skill-category h3 { font-size: .9rem; font-weight: 400; text-transform: uppercase; letter-spacing: 4px; color: var(--primary-pink); margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(255,45,117,.1); font-family: 'Amethysta', serif; }
@@ -227,7 +227,7 @@
         .skill-item:hover::before { transform: scale(1.8); }
         .skill-item span { font-size: .9rem; color: var(--text-gray); transition: color .3s ease; }
         .skill-item:hover span { color: var(--text-white); }
- 
+
         /* ─── EXPERIENCE ─── */
         .experience-item { background: rgba(18,18,18,.3); border: 1px solid rgba(255,255,255,.04); padding: 3.5rem 4rem; border-radius: 24px; max-width: 880px; margin: 0 auto 2.5rem; transition: all .4s ease; position: relative; overflow: hidden; }
         .experience-item::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: linear-gradient(to bottom,var(--primary-pink),transparent); transform: scaleY(0); transform-origin: top; transition: transform .5s cubic-bezier(.22,1,.36,1); }
@@ -239,7 +239,7 @@
         .experience-item ul { list-style: none; }
         .experience-item ul li { color: var(--text-gray); margin-bottom: .8rem; padding-left: 1.5rem; position: relative; font-size: .95rem; line-height: 1.7; }
         .experience-item ul li::before { content: '—'; color: var(--primary-pink); position: absolute; left: 0; }
- 
+
         /* ─── ACHIEVEMENTS ─── */
         .achievements-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap: 2.5rem; }
         .achievement-card { background: rgba(18,18,18,.6); border: 1px solid rgba(255,45,117,.1); padding: 2.5rem; border-radius: 20px; backdrop-filter: blur(10px); transition: all .5s cubic-bezier(.4,0,.2,1); position: relative; overflow: hidden; }
@@ -253,7 +253,7 @@
         .achievement-list li { color: var(--text-gray); padding: .8rem 0; padding-left: 1.5rem; position: relative; font-size: .95rem; line-height: 1.6; transition: all .3s ease; }
         .achievement-list li::before { content: '✦'; color: var(--primary-pink); position: absolute; left: 0; font-size: .8rem; }
         .achievement-card:hover .achievement-list li { color: var(--text-white); padding-left: 2rem; }
- 
+
         /* ─── CONTACT ─── */
         #contact .section-inner { max-width: 800px; margin: 0 auto; text-align: center; }
         .contact-info { margin-bottom: 3rem; }
@@ -266,12 +266,12 @@
         .contact-links { display: flex; gap: 1.5rem; justify-content: center; margin-top: 3rem; }
         .social-link { width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.08); color: var(--text-white); font-size: 1.3rem; border-radius: 14px; text-decoration: none; transition: all .3s cubic-bezier(.175,.885,.32,1.275); }
         .social-link:hover { background: var(--primary-pink); color: #000; transform: translateY(-8px) scale(1.1); box-shadow: 0 12px 30px rgba(255,45,117,.4); border-color: var(--primary-pink); }
- 
+
         /* ─── FOOTER ─── */
         footer { padding: 3rem 6rem; border-top: 1px solid rgba(255,255,255,.05); display: flex; align-items: center; justify-content: space-between; }
         footer p { color: var(--text-gray); font-size: .8rem; letter-spacing: 1px; }
         .footer-accent { width: 40px; height: 1px; background: linear-gradient(90deg,var(--primary-pink),transparent); }
- 
+
         /* ─── MODAL ─── */
         .modal { display: none; position: fixed; inset: 0; z-index: 2000; background: rgba(0,0,0,.95); backdrop-filter: blur(20px); text-align: center; padding: 4rem; align-items: center; justify-content: center; }
         .modal.open { display: flex; flex-direction: column; }
@@ -279,7 +279,7 @@
         @keyframes zoomIn { from{ opacity:0; transform:scale(.92); } to{ opacity:1; transform:scale(1); } }
         .modal-close { position: fixed; top: 2rem; right: 2rem; font-size: .62rem; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: var(--text-white); background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); padding: .8rem 2rem; border-radius: 100px; cursor: pointer; backdrop-filter: blur(10px); transition: all .3s ease; font-family: 'Raleway', sans-serif; }
         .modal-close:hover { background: var(--primary-pink); color: #000; border-color: var(--primary-pink); box-shadow: 0 0 20px var(--primary-pink); }
- 
+
         /* ─── SCROLL REVEAL ─── */
         .reveal { opacity: 0; transform: translateY(36px); transition: opacity .8s cubic-bezier(.4,0,.2,1), transform .8s cubic-bezier(.4,0,.2,1); }
         .reveal.in-view { opacity: 1; transform: translateY(0); }
@@ -287,7 +287,7 @@
         .reveal-delay-2 { transition-delay: .2s; }
         .reveal-delay-3 { transition-delay: .3s; }
         @keyframes fadeSlideUp { from{ opacity:0; transform:translateY(28px); } to{ opacity:1; transform:translateY(0); } }
- 
+
         /* ─── RESPONSIVE ─── */
         @media (max-width:1400px){ .profile-img-container{width:350px;height:450px;} .hero-left{padding:10rem 6rem 4rem;} }
         @media (max-width:1200px){ .hero-left{padding:10rem 4rem 4rem;} .section{padding:6rem 4rem;} nav{padding:1rem 2rem;} .profile-img-container{width:320px;height:420px;} }
@@ -354,7 +354,7 @@
             .experience-item{padding:1.5rem 1rem;}
             .social-link{width:44px;height:44px;font-size:1.1rem;}
         }
-        
+
         /* ─── TOUCH DEVICE OPTIMIZATIONS ─── */
         @media (hover: none) and (pointer: coarse) {
             #cursor, #cursor-ring { display: none !important; }
@@ -367,7 +367,7 @@
             .social-link { width: 50px; height: 50px; }
             .slider-arrow { width: 48px; height: 48px; }
         }
-        
+
         /* ─── MOBILE PERFORMANCE OPTIMIZATIONS ─── */
         @media (max-width: 768px) {
             #orbsCanvas { display: none; }
@@ -375,13 +375,13 @@
         }
     </style>
 </head>
- 
+
 <body>
     <div id="popup-container"></div>
     <canvas id="orbsCanvas"></canvas>
     <div id="cursor"></div>
     <div id="cursor-ring"></div>
- 
+
     <header>
         <nav id="nav">
             <div class="nav-container">
@@ -400,7 +400,7 @@
             </div>
         </nav>
     </header>
- 
+
     <main>
         <section id="hero">
             <div class="hero-left">
@@ -436,7 +436,7 @@
                 </div>
             </div>
         </section>
- 
+
         <section id="about" class="section">
             <h2 class="section-title"><span class="title-accent">About</span></h2>
             <div class="about-content">
@@ -464,7 +464,7 @@
                 </div>
             </div>
         </section>
- 
+
         <section id="education" class="section">
             <h2 class="section-title"><span class="title-accent">Education</span></h2>
             <div class="education-cards">
@@ -494,7 +494,7 @@
                 </div>
             </div>
         </section>
- 
+
         <section id="certificates" class="section">
             <h2 class="section-title reveal"><span class="title-accent">My Certificates</span></h2>
             <div class="certificate-slider-container reveal">
@@ -509,12 +509,9 @@
                         <a href="#" data-img="images/futurereadyITCAREER.jpg"><img src="images/futurereadyITCAREER.jpg" alt="Certificate 7"></a>
                         <a href="#" data-img="images/cap101.png"><img src="images/cap101.png" alt="Cap101"></a>
                         <a href="#" data-img="images/cap102.png"><img src="images/cap102.png" alt="Cap102"></a>
-                         <a href="#" data-img="images/bestonthejobtrainee-cert.jpg"><img src="images/bestonthejobtrainee-cert.jpg" alt="OJTCert"></a>
+                        <a href="#" data-img="images/bestonthejobtrainee-cert.jpg"><img src="images/bestonthejobtrainee-cert.jpg" alt="OJTCert"></a>
                         <a href="#" data-img="images/r-webcert.jpg"><img src="images/r-webcert.jpg" alt="OJTCert"></a>
                         <a href="#" data-img="images/stemconnect.png"><img src="images/stemconnect.png" alt="StemCert"></a>
-                        
-                        
-                    </div>
                     </div>
                 </div>
                 <button class="slider-arrow next-arrow" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
@@ -524,7 +521,7 @@
                 <img class="modal-content" id="modalImg" alt="Certificate Full View">
             </div>
         </section>
- 
+
         <section id="projects" class="section">
             <h2 class="section-title reveal"><span class="title-accent">Projects</span></h2>
             <div class="projects-grid">
@@ -562,33 +559,32 @@
                     </div>
                 </div>
                 <div class="project-card reveal reveal-delay-1">
-    <img src="images/logo4all.png" alt="RWeb Solutions Logo" class="project-logo">
-    <h3>Payment Monitoring System</h3>
-    <p>Developed for RWeb Solutions Corp. to manage and monitor client domains and transactions. The system provides a centralized dashboard for tracking payment statuses, client records, domain renewals, and transaction histories — improving billing transparency and operational efficiency.</p>
-    <div class="project-tags">
-        <span class="project-tag">Laravel</span>
-        <span class="project-tag">Tailwind</span>
-        <span class="project-tag">CSS</span>
-        <span class="project-tag">PHP</span>
-        <span class="project-tag">MySQL</span>
-        <span class="project-tag">Figma Jam</span>
-    </div>
-</div>
-
-<div class="project-card reveal reveal-delay-2">
-    <img src="images/logo4all.png" alt="RWeb Solutions Logo" class="project-logo">
-    <h3>Operation Monitoring System</h3>
-    <p>Built for RWeb Solutions Corp.'s project managers to oversee and track the progress of ongoing projects. Enables real-time monitoring of task assignments, project timelines, team workflows, and completion statuses — streamlining project delivery and team coordination.</p>
-    <div class="project-tags">
-        <span class="project-tag">HTML</span>
-        <span class="project-tag">CSS</span>
-        <span class="project-tag">PHP</span>
-        <span class="project-tag">MySQL</span>
-    </div>
-</div>
+                    <img src="images/logo4all.png" alt="RWeb Solutions Logo" class="project-logo">
+                    <h3>Payment Monitoring System</h3>
+                    <p>Developed for RWeb Solutions Corp. to manage and monitor client domains and transactions. The system provides a centralized dashboard for tracking payment statuses, client records, domain renewals, and transaction histories — improving billing transparency and operational efficiency.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Laravel</span>
+                        <span class="project-tag">Tailwind</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">PHP</span>
+                        <span class="project-tag">MySQL</span>
+                        <span class="project-tag">Figma Jam</span>
+                    </div>
+                </div>
+                <div class="project-card reveal reveal-delay-2">
+                    <img src="images/logo4all.png" alt="RWeb Solutions Logo" class="project-logo">
+                    <h3>Operation Monitoring System</h3>
+                    <p>Built for RWeb Solutions Corp.'s project managers to oversee and track the progress of ongoing projects. Enables real-time monitoring of task assignments, project timelines, team workflows, and completion statuses — streamlining project delivery and team coordination.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">PHP</span>
+                        <span class="project-tag">MySQL</span>
+                    </div>
+                </div>
             </div>
         </section>
- 
+
         <section id="skills" class="section">
             <h2 class="section-title reveal"><span class="title-accent">Skills</span></h2>
             <div class="skills-container">
@@ -612,7 +608,7 @@
                 </div>
             </div>
         </section>
- 
+
         <section id="experience" class="section">
             <h2 class="section-title reveal"><span class="title-accent">Experience</span></h2>
             <div class="experience-item reveal">
@@ -636,26 +632,25 @@
                     <li>Strong database management skills with SQL, designing and optimizing relational databases.</li>
                     <li>Full-stack web development capabilities including backend frameworks like Flask and frontend technologies.</li>
                 </ul>
-            </div> 
+            </div>
             <div class="experience-item reveal reveal-delay-2">
-    <h3>UI/UX Designer & Debugger</h3>
-    <h4>RWeb Solutions Corp.</h4>
-    <span class="date"> March - May 2026</span>
-    <ul>
-        <li>Designed user-friendly and visually appealing interfaces for web-based systems, ensuring a seamless user experience.</li>
-        <li>Created wireframes, mockups, and design prototypes to improve system usability and workflow efficiency.</li>
-        <li>Collaborated with developers and project managers to implement design solutions aligned with business requirements.</li>
-        <li>Performed system debugging, testing, and troubleshooting to identify and resolve functional and interface-related issues.</li>
-        <li>Assisted in improving system performance, responsiveness, and overall user satisfaction through continuous testing and refinement.</li> 
-        <li>Designed a client-facing homepage that was successfully approved for implementation.</li>
-        <li>Developed the sitemap and navigation structure for the Payment Monitoring System, approved by the Sales Manager.</li>
-        <li>Applied UI/UX principles to improve user experience, accessibility, and workflow efficiency.</li>
-        <li>Collaborated with project stakeholders to translate business requirements into functional design solutions.</li> 
-        
-    </ul>
-</div>
+                <h3>UI/UX Designer & Debugger</h3>
+                <h4>RWeb Solutions Corp.</h4>
+                <span class="date">March - May 2026</span>
+                <ul>
+                    <li>Designed user-friendly and visually appealing interfaces for web-based systems, ensuring a seamless user experience.</li>
+                    <li>Created wireframes, mockups, and design prototypes to improve system usability and workflow efficiency.</li>
+                    <li>Collaborated with developers and project managers to implement design solutions aligned with business requirements.</li>
+                    <li>Performed system debugging, testing, and troubleshooting to identify and resolve functional and interface-related issues.</li>
+                    <li>Assisted in improving system performance, responsiveness, and overall user satisfaction through continuous testing and refinement.</li>
+                    <li>Designed a client-facing homepage that was successfully approved for implementation.</li>
+                    <li>Developed the sitemap and navigation structure for the Payment Monitoring System, approved by the Sales Manager.</li>
+                    <li>Applied UI/UX principles to improve user experience, accessibility, and workflow efficiency.</li>
+                    <li>Collaborated with project stakeholders to translate business requirements into functional design solutions.</li>
+                </ul>
+            </div>
         </section>
- 
+
         <section id="achievements" class="section">
             <h2 class="section-title reveal"><span class="title-accent">Achievements & Interests</span></h2>
             <div class="achievements-grid">
@@ -670,7 +665,6 @@
                         <li>Responsive Web Design Certificate</li>
                         <li>JavaScript Algorithms & Data Structures</li>
                         <li>PCITS Information Technology Excellence</li>
-            
                     </ul>
                 </div>
                 <div class="achievement-card reveal reveal-delay-2">
@@ -701,7 +695,7 @@
                 </div>
             </div>
         </section>
- 
+
         <section id="contact" class="section">
             <div class="section-inner">
                 <h2 class="section-title reveal"><span class="title-accent">Contact Me</span></h2>
@@ -730,16 +724,16 @@
             </div>
         </section>
     </main>
- 
+
     <footer>
         <p>&copy; 2026 Angeline P. Delos Reyes. All Rights Reserved.</p>
         <div class="footer-accent"></div>
     </footer>
- 
+
     <script>
         const isTouchDevice = () => (('ontouchstart' in window) || (navigator.maxTouchPoints > 0)) || window.innerWidth <= 768;
         const isDesktop = !isTouchDevice();
-        
+
         // ── ORBS CANVAS ──
         if (isDesktop) {
             const canvas = document.getElementById('orbsCanvas');
@@ -788,7 +782,7 @@
             }
             animateOrbs();
         }
- 
+
         // ── CURSOR ──
         if (isDesktop) {
             const cursor = document.getElementById('cursor');
@@ -797,7 +791,7 @@
             document.addEventListener('mousemove',e=>{ mx=e.clientX; my=e.clientY; cursor.style.left=mx+'px'; cursor.style.top=my+'px'; });
             (function animRing(){ rx+=(mx-rx)*0.12; ry+=(my-ry)*0.12; ring.style.left=rx+'px'; ring.style.top=ry+'px'; requestAnimationFrame(animRing); })();
         }
- 
+
         // ── NAVIGATION ──
         const nav         = document.getElementById('nav');
         const allSections = document.querySelectorAll('section');
@@ -821,12 +815,12 @@
             nl.classList.toggle('open');
             tog.querySelector('i').className=nl.classList.contains('open')?'fas fa-times':'fas fa-bars';
         });
- 
+
         // ── CERTIFICATE SLIDER ──
         const carousel=document.getElementById('carousel');
         document.getElementById('prevBtn').addEventListener('click',()=>carousel.scrollBy({left:-480,behavior:'smooth'}));
         document.getElementById('nextBtn').addEventListener('click',()=>carousel.scrollBy({left:480,behavior:'smooth'}));
- 
+
         // ── CERTIFICATE MODAL ──
         const modal =document.getElementById('certModal');
         const mImg  =document.getElementById('modalImg');
@@ -844,9 +838,10 @@
         modal.addEventListener('click',e=>{ if(e.target===modal) closeModal(); });
         document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeModal(); });
 
-        // ── DESIGN PORTFOLIO CARD SHUFFLE ──
+        // ── DESIGN PORTFOLIO CARD SHUFFLE (only runs if the section exists) ──
         (function(){
-            const stage  = document.getElementById('shuffleStage');
+            const stage = document.getElementById('shuffleStage');
+            if (!stage) return;
             const cards  = Array.from(stage.querySelectorAll('.shuffle-card'));
             const dotsEl = document.getElementById('shuffleDots');
             const prevBtn= document.getElementById('shufflePrev');
@@ -854,7 +849,8 @@
             const dModal = document.getElementById('designModal');
             const dImg   = document.getElementById('designModalImg');
             const dClose = document.getElementById('designModalClose');
-            let order = cards.map((_,i)=>i); // order[0] is the card index currently on top
+            if (!cards.length || !dotsEl || !prevBtn || !nextBtn || !dModal || !dImg || !dClose) return;
+            let order = cards.map((_,i)=>i);
             let animating = false;
 
             cards.forEach((_,i)=>{
@@ -877,8 +873,7 @@
             function shuffleNext(){
                 if(animating) return;
                 animating = true;
-                const topIdx = order[0];
-                const topEl  = cards[topIdx];
+                const topEl = cards[order[0]];
                 topEl.classList.add('leaving');
                 setTimeout(()=>{
                     order.push(order.shift());
@@ -902,7 +897,6 @@
                     if(card.classList.contains('pos-0')){
                         shuffleNext();
                     } else {
-                        // bring the clicked card to front
                         const idx = cards.indexOf(card);
                         const posInOrder = order.indexOf(idx);
                         order.splice(posInOrder,1);
@@ -910,9 +904,6 @@
                         render();
                     }
                 });
-            });
-
-            document.querySelectorAll('.shuffle-card').forEach(card=>{
                 card.addEventListener('dblclick', e=>{
                     e.preventDefault();
                     dImg.src = card.dataset.img;
@@ -925,14 +916,14 @@
             dModal.addEventListener('click', e=>{ if(e.target===dModal) closeDesignModal(); });
             document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeDesignModal(); });
         })();
- 
+
         // ── SCROLL REVEAL ──
         const revealEls=document.querySelectorAll('.reveal');
         const revealObs=new IntersectionObserver(entries=>{
             entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in-view'); revealObs.unobserve(en.target); } });
         },{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
         revealEls.forEach(el=>revealObs.observe(el));
- 
+
         // ── POPUP BUBBLES ──
         if (isDesktop) {
             (function(){
